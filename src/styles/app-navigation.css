@@ -1,0 +1,45 @@
+.app-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--nav-height);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-utils-gray);
+    z-index: var(--index-header);
+}
+
+.app-navigation::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    width: calc(100% - (var(--content-spacing-xlarge) * 2));
+    margin: auto;
+    border-bottom: var(--theme-small-border);
+}
+
+.app-navigation-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    max-width: 1440px;
+    width: 100%;
+    height: inherit;
+    padding-left: var(--content-spacing-xlarge);
+    padding-right: var(--content-spacing-xlarge);
+    position: relative;
+}
+
+.app-navigation-column-left,
+.app-navigation-column-right {
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
