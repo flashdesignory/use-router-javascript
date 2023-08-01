@@ -21,7 +21,7 @@ const state: RouterState = {
     defaultRoute: "home"
 }
 
-const handleChange = (route: string) => {    
+const handleChange = (route: string) => {
     if (!contentRoot) return;
 
     const { defaultRoute, currentRoute } = state;
@@ -32,7 +32,7 @@ const handleChange = (route: string) => {
 
     broadcaster.broadcast("navigation-begin", { currentRoute, nextRoute: routeName });
 
-    switch(routeName) {
+    switch (routeName) {
         case "about":
             contentRoot.appendChild(About(routes["about"]));
             break;

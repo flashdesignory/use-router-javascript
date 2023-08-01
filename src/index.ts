@@ -9,7 +9,7 @@ const app = document.createElement("div");
 app.classList.add("app");
 document.body.appendChild(app);
 
-const {layout, main} = AppLayout();
+const { layout, main } = AppLayout();
 app.appendChild(layout);
 
 init(main);

@@ -8,7 +8,7 @@ export function PageNavbar() {
 
     const links: HTMLElement[] = [];
 
-    function handleNavigationBegin({currentRoute, nextRoute}: {currentRoute: string, nextRoute: string}) {
+    function handleNavigationBegin({ currentRoute, nextRoute }: { currentRoute: string, nextRoute: string }) {
         links.forEach(link => {
 
             if (link.id === currentRoute) {
@@ -32,7 +32,7 @@ export function PageNavbar() {
     const list = document.createElement("ul");
     list.classList.add("page-navbar-list");
 
-    Object.keys(routes).forEach( key => {
+    Object.keys(routes).forEach(key => {
         const value = routes[key];
         if (value.hideInNav) return;
         const item = document.createElement("li");

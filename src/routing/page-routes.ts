@@ -5,7 +5,7 @@ export type Route = {
     hideInNav?: boolean;
 }
 
-export type Routes = {[key: string]: Route}
+export type Routes = { [key: string]: Route }
 
 export const routes: Routes = {
     home: {

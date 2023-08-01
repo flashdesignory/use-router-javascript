@@ -12,7 +12,7 @@ export function AppFooter() {
 
     const copyright = document.createElement("div");
     copyright.classList.add("app-footer-copyright");
-    copyright.textContent =  `© ${new Date().getFullYear()} All Rights Reserved!`;
+    copyright.textContent = `© ${new Date().getFullYear()} All Rights Reserved!`;
 
     column.appendChild(copyright);
     row.appendChild(column);
