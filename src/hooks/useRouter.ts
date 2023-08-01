@@ -6,7 +6,7 @@ export type Router = {
     disableRouter: () => void;
 }
 
-export const useRouter = (callback?: RouterCallback): Router => {
+export function useRouter(callback?: RouterCallback):Router {
     let onChange = callback;
     let current = "";
 

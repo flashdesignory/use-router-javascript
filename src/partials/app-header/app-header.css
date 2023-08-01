@@ -12,7 +12,25 @@
     padding: var(--content-spacing-xlarge) var(--content-spacing-xlarge) var(--content-spacing-xsmall) var(--content-spacing-xlarge);
 }
 
-.app-header .app-header-title {
+.app-header-title {
     display: flex;
     flex-shrink: 1;
+}
+
+.app-header-link {
+    display: flex;
+    text-decoration: none;
+    color: var(--theme-navigation-text);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.app-header-link:hover {
+    color: var(--theme-navigation-text-hover);
 }

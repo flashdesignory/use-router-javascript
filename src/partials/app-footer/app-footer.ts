@@ -1,4 +1,4 @@
-import "../styles/app-footer.css";
+import "./app-footer.css";
 
 export function AppFooter() {
     const footer = document.createElement("footer");

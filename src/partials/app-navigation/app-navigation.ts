@@ -1,9 +1,8 @@
-import { PageNavbar } from "../components/page-navbar";
-import type { PageNavbarProps } from "../components/page-navbar";
+import { PageNavbar } from "../../components/page-navbar";
 
-import "../styles/app-navigation.css";
+import "./app-navigation.css";
 
-export function AppNavigation({ routes, activeRoute }: PageNavbarProps) {
+export function AppNavigation() {
     const navigation = document.createElement("nav");
     navigation.classList.add("app-navigation");
 
@@ -13,7 +12,7 @@ export function AppNavigation({ routes, activeRoute }: PageNavbarProps) {
     const column = document.createElement("div");
     column.classList.add("app-navigation-column-left");
 
-    column.appendChild(PageNavbar({ routes, activeRoute }));
+    column.appendChild(PageNavbar());
     row.appendChild(column);
     navigation.appendChild(row);
     return navigation;

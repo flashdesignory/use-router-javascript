@@ -1,9 +1,10 @@
-import { PageTitle } from "../components/page-title";
+import { PageTitle } from "../../components/page-title";
+import type { Route } from "../../routing/page-routes";
 
-export function About() {
+export function About(route: Route) {
     const content = document.createElement("div");
     content.classList.add("page-content");
-    content.appendChild(PageTitle("About"));
+    content.appendChild(PageTitle(route.label));
     const temp = document.createElement("p");
     temp.textContent = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet libero at ligula ultrices bibendum. Cras porta sem eget nunc elementum, sed scelerisque massa lobortis. Nam eu elit in enim accumsan tincidunt. Quisque dignissim ut nisl quis porttitor. Etiam in augue diam. Sed dui elit, ultrices a vestibulum eget, convallis at est. Sed rhoncus elementum purus.
 
