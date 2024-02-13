@@ -21,7 +21,7 @@ const state: RouterState = {
     defaultRoute: "home"
 }
 
-const handleChange = (route: string) => {
+function handleChange(route: string) {
     if (!contentRoot) return;
 
     const { defaultRoute, currentRoute } = state;

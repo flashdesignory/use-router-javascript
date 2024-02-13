@@ -10,23 +10,25 @@ export function useRouter(callback?: RouterCallback): Router {
     let onChange = callback;
     let current = "";
 
-    const handleChange = () => {
+    function handleChange() {
         current = document.location.hash;
         onChange?.(document.location.hash);
-    };
+    }
 
-    const initRouter = (callback: RouterCallback) => {
+    function initRouter(callback: RouterCallback) {
         onChange = callback;
         window.addEventListener("hashchange", handleChange);
         window.addEventListener("load", handleChange);
-    };
+    }
 
-    const disableRouter = () => {
+    function disableRouter () {
         window.removeEventListener("hashchange", handleChange);
         window.removeEventListener("load", handleChange);
-    };
+    }
 
-    const getRoute = () => current.split("/").slice(-1)[0];
+    function getRoute() {
+        return current.split("/").slice(-1)[0];
+    }
 
     return { initRouter, getRoute, disableRouter };
 };
