@@ -1,6 +1,12 @@
+export type UseBroadcasterAPI = {
+    subscribe: (event: any, fn: any) => void;
+    unsubscribe: (event: any, fn: any) => void;
+    broadcast: (event: any, data: any) => void;
+}
+
 const events: any[] = [];
 
-export function useEventsBroadcaster() {
+export function useEventsBroadcaster(): UseBroadcasterAPI {
     function subscribe(event: any, fn: any) {
         if (!events[event]) {
             events[event] = [];
