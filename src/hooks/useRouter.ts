@@ -1,12 +1,16 @@
 export type RouterCallback = (hash: string) => void;
 
-export type Router = {
+export type UseRouterOptions = {
+    callback?: RouterCallback;
+}
+
+export type UseRouterAPI = {
     initRouter: (callback: RouterCallback) => void;
     getRoute: () => string;
     disableRouter: () => void;
 }
 
-export function useRouter(callback?: RouterCallback): Router {
+export function useRouter({ callback } : UseRouterOptions = {}): UseRouterAPI {
     let onChange = callback;
     let current = "";
 
@@ -30,5 +34,5 @@ export function useRouter(callback?: RouterCallback): Router {
         return current.split("/").slice(-1)[0];
     }
 
-    return { initRouter, getRoute, disableRouter };
+    return ({ initRouter, getRoute, disableRouter });
 };
